@@ -1,7 +1,7 @@
 package com.tongchen.gank2.http;
 
 
-import com.tongchen.gank2.entity.Gank;
+import com.tongchen.gank2.bean.Gank;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -13,8 +13,15 @@ import retrofit2.http.Path;
  * Description:
  */
 
-public interface GankApi {
+public interface RetrofitService {
 
+    /**
+     * 按日期获取数据
+     *
+     * @param year  年
+     * @param month 月
+     * @param date  日
+     */
     @GET("day/{year}/{month}/{date}")
     Observable<Gank> requestByDate(@Path("year") String year, @Path("month") String month, @Path("date") String date);
 

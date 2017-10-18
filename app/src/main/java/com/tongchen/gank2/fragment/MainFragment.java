@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tongchen.gank2.R;
+import com.tongchen.gank2.bean.Gank;
 import com.tongchen.gank2.presenter.impl.GankPresenterImpl;
 import com.tongchen.gank2.view.GankView;
 
@@ -39,18 +40,13 @@ public class MainFragment extends Fragment implements GankView {
     }
 
     @Override
-    public void requestByCategory(String category, int count, int pageNo) {
-
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        mGankPresenter=new GankPresenterImpl(this);
+        // mGankPresenter=new GankPresenterImpl(this);
     }
 
     @Override
@@ -79,6 +75,17 @@ public class MainFragment extends Fragment implements GankView {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+
+    @Override
+    public void requestByCategorySuccess(Gank gank) {
+
+    }
+
+    @Override
+    public void requestFailed(String msg) {
+
     }
 
 

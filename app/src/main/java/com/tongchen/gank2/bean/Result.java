@@ -1,4 +1,4 @@
-package com.tongchen.gank2.entity;
+package com.tongchen.gank2.bean;
 
 import com.google.gson.annotations.SerializedName;
 
