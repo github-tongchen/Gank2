@@ -3,7 +3,6 @@ package com.tongchen.gank2.http;
 import android.content.Context;
 import android.util.Log;
 
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +11,7 @@ import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -47,7 +47,7 @@ public class RetrofitHelper {
                 .baseUrl(HttpUrl.GANK_BASE_URL)
                 .client(provideOkHttpClient(new OkHttpClient.Builder(), mContext))
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
     }
 

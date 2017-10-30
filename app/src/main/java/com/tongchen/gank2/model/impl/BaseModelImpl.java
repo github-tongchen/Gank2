@@ -16,7 +16,7 @@ public class BaseModelImpl implements BaseModel {
     private CompositeDisposable mCompositeDisposable;
 
     @Override
-    public void register(Disposable disposable) {
+    public void registerDisposable(Disposable disposable) {
         if (mCompositeDisposable == null) {
             mCompositeDisposable = new CompositeDisposable();
         }
@@ -24,7 +24,7 @@ public class BaseModelImpl implements BaseModel {
     }
 
     @Override
-    public void unRegister() {
+    public void unRegisterDisposable() {
         if (mCompositeDisposable != null) {
             //  mCompositeDisposable.dispose();
             mCompositeDisposable.clear();

@@ -10,7 +10,7 @@ import io.reactivex.disposables.Disposable;
 
 public interface BaseModel {
 
-    void register(Disposable disposable);
+    void registerDisposable(Disposable disposable);
 
-    void unRegister();
+    void unRegisterDisposable();
 }

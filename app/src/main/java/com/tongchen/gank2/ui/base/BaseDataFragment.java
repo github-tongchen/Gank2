@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
-import me.yokeyword.fragmentation.SupportFragment;
+import com.tongchen.gank2.presenter.impl.BasePresenterImpl;
 
 /**
  * Created by TongChen on 2017/10/18.
@@ -14,22 +12,21 @@ import me.yokeyword.fragmentation.SupportFragment;
  * Description:
  */
 
-public class BaseFragment extends SupportFragment {
+public class BaseDataFragment<V, T extends BasePresenterImpl<V>> extends BaseFragment {
 
-    private Unbinder mUnbinder;
+    private T mPresenterImpl;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //  绑定ButterKnife
-        mUnbinder = ButterKnife.bind(this, view);
 
+        mPresenterImpl.attachView((V)this);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //  解绑ButterKnife
-        mUnbinder.unbind();
+
+        mPresenterImpl.detachView();
     }
 }
