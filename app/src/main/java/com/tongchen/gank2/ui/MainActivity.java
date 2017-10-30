@@ -1,5 +1,6 @@
 package com.tongchen.gank2.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.SupportActivity;
 import android.widget.RelativeLayout;
@@ -13,12 +14,13 @@ public class MainActivity extends SupportActivity {
     private static final String TAG = "MainActivity";
 
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RelativeLayout container=(RelativeLayout) findViewById(R.id.container);
+        RelativeLayout container= findViewById(R.id.container);
 
 
         initViews();
