@@ -39,9 +39,6 @@ dependencies {
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    /**
-     *  V 层依赖
-     */
     //  ButterKnife
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
@@ -51,9 +48,6 @@ dependencies {
     //  Glide
     compile 'com.github.bumptech.glide:glide:4.2.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
-    /**
-     *  M 层依赖
-     */
     //  RxJava2
     compile 'io.reactivex.rxjava2:rxjava:2.1.4'
     //  RxAndroid
