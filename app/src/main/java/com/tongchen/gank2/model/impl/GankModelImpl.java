@@ -1,7 +1,7 @@
 package com.tongchen.gank2.model.impl;
 
 import com.tongchen.gank2.CallBack;
-import com.tongchen.gank2.CategoryRequest;
+import com.tongchen.gank2.request.CategoryRequest;
 import com.tongchen.gank2.data.GankData;
 import com.tongchen.gank2.model.GankModel;
 
@@ -25,7 +25,6 @@ public class GankModelImpl implements GankModel {
 
     @Override
     public void getGankData(String category, int page, int size) {
-
 
         CategoryRequest request = new CategoryRequest();
         request.mCategoryName = category;

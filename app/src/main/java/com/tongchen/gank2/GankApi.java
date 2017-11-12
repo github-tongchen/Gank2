@@ -2,6 +2,7 @@ package com.tongchen.gank2;
 
 import com.tongchen.gank2.data.Android;
 import com.tongchen.gank2.data.GankData;
+import com.tongchen.gank2.request.CategoryRequest;
 
 
 import io.reactivex.Observable;

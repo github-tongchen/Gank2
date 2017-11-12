@@ -1,11 +1,10 @@
 package com.tongchen.gank2.di.module;
 
 import android.content.Context;
-import android.os.Debug;
 import android.util.Log;
 
 import com.tongchen.gank2.GankApi;
-import com.tongchen.gank2.Url;
+import com.tongchen.gank2.constant.Url;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
