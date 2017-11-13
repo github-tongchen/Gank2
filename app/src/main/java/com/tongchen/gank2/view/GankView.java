@@ -1,6 +1,7 @@
 package com.tongchen.gank2.view;
 
 import com.tongchen.gank2.data.Android;
+import com.tongchen.gank2.data.GankData;
 
 /**
  * Created by TongChen on 2017/11/10.
@@ -8,9 +9,9 @@ import com.tongchen.gank2.data.Android;
  * Description:
  */
 
-public interface AndroidView {
+public interface GankView {
 
     void showError(String msg);
 
-    void showResult(Android result);
+    void showResult(GankData<Android> result);
 }
