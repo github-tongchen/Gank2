@@ -1,6 +1,8 @@
 package com.tongchen.gank2;
 
+import android.app.Activity;
 import android.app.Application;
+import android.os.Bundle;
 
 import com.tongchen.gank2.di.component.AppComponent;
 import com.tongchen.gank2.di.component.DaggerAppComponent;

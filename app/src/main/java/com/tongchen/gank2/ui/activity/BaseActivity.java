@@ -22,5 +22,6 @@ public abstract class BaseActivity extends SupportActivity {
         initView();
     }
 
+
     protected abstract void initView();
 }

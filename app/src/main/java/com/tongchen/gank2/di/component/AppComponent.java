@@ -3,6 +3,7 @@ package com.tongchen.gank2.di.component;
 import android.content.Context;
 
 import com.tongchen.gank2.GankApi;
+import com.tongchen.gank2.di.module.ActivityModule;
 import com.tongchen.gank2.di.module.AppModule;
 import com.tongchen.gank2.di.module.HttpModule;
 
@@ -23,6 +24,8 @@ import dagger.Provides;
 @Singleton
 @Component(modules = {AppModule.class, HttpModule.class})
 public interface AppComponent {
+
+    ActivityComponent addSubComponent(ActivityModule module);
 
     Context provideApplicationContext();
 

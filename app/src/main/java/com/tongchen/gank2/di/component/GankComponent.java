@@ -16,7 +16,4 @@ import dagger.Component;
 public interface GankComponent {
 
 
-
-    void inject(MainActivity activity);
-
 }
