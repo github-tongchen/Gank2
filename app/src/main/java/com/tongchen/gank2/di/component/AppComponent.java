@@ -25,7 +25,7 @@ import dagger.Provides;
 @Component(modules = {AppModule.class, HttpModule.class})
 public interface AppComponent {
 
-    ActivityComponent addSubComponent(ActivityModule module);
+
 
     Context provideApplicationContext();
 

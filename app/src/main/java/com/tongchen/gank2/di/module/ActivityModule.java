@@ -2,7 +2,10 @@ package com.tongchen.gank2.di.module;
 
 import android.support.v4.content.res.FontResourcesParserCompat;
 
+import com.tongchen.gank2.di.scope.ActivityScope;
 import com.tongchen.gank2.view.BaseView;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -23,6 +26,7 @@ public class ActivityModule {
     }
 
 
+    @ActivityScope
     @Provides
     BaseView provideBaseView() {
         return mBaseView;
